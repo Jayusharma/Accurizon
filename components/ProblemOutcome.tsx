@@ -59,7 +59,7 @@ export default function ProblemOutcome() {
             ref={sectionRef}
             className="section-shell"
             style={{
-                background: '#F7F5F2', // Reverted to base color
+                background: '#F9FAFB', // Reverted to base color
                 color: '#0A1628',
                 paddingTop: '160px',
                 paddingBottom: '160px',
@@ -156,7 +156,7 @@ export default function ProblemOutcome() {
                                 style={{
                                     position: 'absolute',
                                     inset: '0 0 24px 0',
-                                    background: '#F7F5F2', // Matches section bg to hide problem text completely
+                                    background: '#F9FAFB', // Matches section bg to hide problem text completely
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     alignItems: 'baseline',

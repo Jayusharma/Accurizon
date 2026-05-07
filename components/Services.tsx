@@ -141,7 +141,7 @@ export default function Services() {
             id="services"
             ref={sectionRef}
             style={{
-                background: '#F7F5F2', // Base Canvas color matches the site flow perfectly
+                background: '#F9FAFB', // Base Canvas color matches the site flow perfectly
                 overflow: 'hidden',
                 position: 'relative',
             }}

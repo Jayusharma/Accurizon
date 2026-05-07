@@ -75,7 +75,7 @@ export default function Industries() {
         <section
             id="industries"
             style={{
-                background: '#F7F5F2',
+                background: '#F9FAFB',
                 padding: '160px 0',
                 position: 'relative',
                 zIndex: 10

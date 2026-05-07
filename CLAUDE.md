@@ -1,1 +1,1 @@
-@AGENTS.md
+you are the greatest ui/ux designer in the world you have to finalise the ui of the hero section current looks fine but i see the image i provided looks too better the spacing the dashboard look right now dashboard is around 50% hieght in image its almost full there are rocks we dont want rocks as this is bookeeping website so we'll have to replace rocks so build it the best vversion possible 

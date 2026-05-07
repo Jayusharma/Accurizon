@@ -179,7 +179,7 @@ export default function Process() {
     const activeVisual = steps[activeIndex];
 
     return (
-        <section style={{ background: '#F7F5F2', padding: '0 0 0 5px' }}>
+        <section style={{ background: '#F9FAFB', padding: '0 0 0 5px' }}>
             <div
                 id="process"
                 ref={containerRef}
