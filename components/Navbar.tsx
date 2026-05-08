@@ -11,10 +11,22 @@ const navLinks = [
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const onScroll = () => {
-            setScrolled(window.scrollY > 24);
+            const currentScrollY = window.scrollY;
+            setScrolled(currentScrollY > 24);
+            
+            if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+                // Scrolling down & past top threshold -> hide
+                setHidden(true);
+            } else if (currentScrollY < lastScrollY.current) {
+                // Scrolling up -> show
+                setHidden(false);
+            }
+            lastScrollY.current = currentScrollY;
         };
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
@@ -33,6 +45,7 @@ export default function Navbar() {
                 background: scrolled ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
                 backdropFilter: scrolled ? 'blur(10px)' : 'none',
                 borderBottom: scrolled ? '1px solid rgba(0,0,0,0.05)' : 'none',
+                transform: hidden ? 'translateY(-100%)' : 'translateY(0)',
             }}
         >
             <div

@@ -34,7 +34,7 @@ export default function Breather() {
             ref={sectionRef}
             style={{
                 background: '#F9FAFB', // Base canvas color
-                padding: '64px 24px 120px', // Reduced top padding
+                padding: '64px 24px 40px',
                 textAlign: 'center',
                 display: 'flex',
                 flexDirection: 'column',
