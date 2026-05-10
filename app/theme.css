@@ -13,7 +13,15 @@
   --color-warning: #f59e0b;
   --color-danger: #dc2626;
 
-  --font-sans: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: var(--font-rethink1), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-rethink1: var(--font-rethink1), -apple-system, sans-serif;
+  --font-rethink2: var(--font-rethink2), -apple-system, sans-serif;
+  --font-rethink3: var(--font-rethink3), -apple-system, sans-serif;
+  --font-rethink-semi: var(--font-rethink-semi), -apple-system, sans-serif;
+  --font-mont: var(--font-mont), -apple-system, sans-serif;
+  --font-mont-ex: var(--font-mont-ex), -apple-system, sans-serif;
+  --font-mayur: var(--font-mayur), -apple-system, sans-serif;
+  --font-mayur2: var(--font-mayur2), -apple-system, sans-serif;
 
   --space-section: clamp(5.5rem, 9vw, 7.5rem);
   --space-section-tight: clamp(4.5rem, 7vw, 6rem);

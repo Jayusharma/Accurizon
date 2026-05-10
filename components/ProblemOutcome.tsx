@@ -73,9 +73,9 @@ export default function ProblemOutcome() {
                 <div style={{ marginBottom: '100px' }}>
                     {/* Overflow hidden container to cleanly clip the text as it slides up */}
                     <div style={{ overflow: 'hidden', paddingBottom: '20px' }}>
-                        <h2
+                        <h2  className='font-mont '
                             style={{
-                                fontSize: 'clamp(3rem, 7vw, 6.5rem)',
+                                fontSize: 'clamp(3rem, 5vw, 4.5rem)',
                                 fontWeight: 500,
                                 lineHeight: 1.05,
                                 letterSpacing: '-0.04em',
@@ -100,7 +100,9 @@ export default function ProblemOutcome() {
                         maxWidth: '1200px'
                     }}
                 >
-                    <div style={{
+                    <div 
+                    className='font-serif'
+                    style={{
                         fontSize: '0.85rem',
                         fontWeight: 700,
                         letterSpacing: '0.05em',
@@ -114,7 +116,7 @@ export default function ProblemOutcome() {
                     {factors.map((factor, index) => (
                         <div
                             key={index}
-                            className="problem-row"
+                            className="problem-row font-rethink2"
                             style={{
                                 position: 'relative',
                                 paddingBottom: '24px',

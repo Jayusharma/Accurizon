@@ -142,16 +142,19 @@ export default function WhyChoose() {
         >
             <div style={{ display: 'grid', gap: '18px', marginBottom: '80px' }}>
                 <div ref={textRef} style={{ whiteSpace: 'nowrap', willChange: 'transform' }}>
-                    <span style={{
+                    <span 
+                    className="font-mont"
+                    style={{
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '32px',
+                        gap: '10px',
                         paddingRight: '32px',
                         color: '#0A1628', 
-                        fontSize: 'clamp(4rem, 12vw, 11rem)',
-                        fontWeight: 650,
+                        fontSize: 'clamp(5rem, 8vw, 9rem)',
+                        // fontWeight: 900,
                         lineHeight: 0.92,
-                        letterSpacing: '-0.06em',
+                       transform: `scaleY(1.2)`,
+                        // letterSpacing: '0.06em',
                     }}>
                         {Array.from({ length: 6 }).map((_, i) => (
                             <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '32px' }}>
@@ -175,7 +178,7 @@ export default function WhyChoose() {
                                 <div style={{ fontFamily: 'var(--font-mono, monospace)', color: '#64748B', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '16px' }}>
                                     {item.num}
                                 </div>
-                                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#0A1628', marginBottom: '12px', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+                                <h3 className="font-rethink-semi" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#0A1628', marginBottom: '12px', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
                                     {item.title}
                                 </h3>
                                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>

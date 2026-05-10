@@ -8,6 +8,8 @@ import Process from "@/components/Process";
 import Industries from "@/components/Industries";
 import Proof from "@/components/Proof";
 import FinalCTA from "@/components/FinalCTA";
+import Testimonials from "@/components/Testimonials";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Breather />
       <Process />
       <Industries />
+      <Testimonials />
+      <ContactSection />
       {/* <Proof />
       <FinalCTA /> */}
     </main>

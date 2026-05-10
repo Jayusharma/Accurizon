@@ -3,10 +3,10 @@
 import { useEffect, useState, useRef } from 'react';
 
 const navLinks = [
-    { label: 'DASHBOARD', href: '#' },
-    { label: 'ASSETS', href: '#' },
-    { label: 'ANALYTICS', href: '#' },
-    { label: 'MARKETS', href: '#' },
+    { label: 'About', href: '/about' },
+    { label: 'Service', href: '/services' },
+    { label: 'Industries', href: '/industries' },
+    { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -59,7 +59,8 @@ export default function Navbar() {
             >
                 {/* Logo */}
                 <a
-                    href="#"
+                   
+                    href="/"
                     style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -67,7 +68,8 @@ export default function Navbar() {
                         color: '#000',
                         fontWeight: 800,
                         fontSize: '1.5rem',
-                        letterSpacing: '-0.05em',
+                        letterSpacing: '1.2px',
+                        fontFamily: 'var(--font-mont)',
                     }}
                 >
                     Accurizon
@@ -96,7 +98,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Right side: Language and CTA */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+                {/* <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#4B5563' }}>
                             <circle cx="12" cy="12" r="10" />
@@ -126,7 +128,7 @@ export default function Navbar() {
                     >
                         Launch app
                     </a>
-                </div>
+                </div> */}
             </div>
         </nav>
     );

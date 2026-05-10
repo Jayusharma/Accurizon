@@ -55,13 +55,13 @@ export default function Hero() {
                 <div style={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', color: '#9CA3AF', marginBottom: '10px', textTransform: 'uppercase' }}>
                     FINANCE REIMAGINED
                 </div>
-                <h1 style={{ fontSize: '3.6rem', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: '10px' }}>
-                    <span style={{ color: '#9CA3AF' }}>A New Standard</span><br />
-                    <span style={{ color: '#111827' }}>in Wealth Management</span>
+        <h1  style={{ fontSize: '3.6rem', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: '30px' }}>
+                    <span className="font-mont"style={{ color: '#9CA3AF' }}>A New Standard</span><br />
+                    <span className="font-rethink-semi" style={{ color: '#111827' }}>in Wealth Management</span>
                 </h1>
-                <p style={{ fontSize: '0.9rem', color: '#9CA3AF', maxWidth: '460px', margin: '0 auto', lineHeight: 1.4, fontWeight: 400 }}>
+                {/* <p style={{ fontSize: '0.9rem', color: '#9CA3AF', maxWidth: '460px', margin: '0 auto', lineHeight: 1.4, fontWeight: 400 }}>
                     Take full control of your assets with a unified platform for investing, tracking, and growing your portfolio in real time.
-                </p>
+                </p> */}
             </div>
 
             {/* Dashboard Container */}

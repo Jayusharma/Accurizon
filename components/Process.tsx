@@ -15,7 +15,7 @@ const PROCESS_STYLES = `
 @keyframes num-pulse   { 0%,100%{opacity:1} 50%{opacity:0.55} }
 `;
 
-const GOLD = 'rgba(200,169,110,';
+const GOLD = 'rgba(59,130,246,';
 
 const steps = [
     {
@@ -37,7 +37,9 @@ const steps = [
                     <line x1="130" y1="130" x2="130" y2="44" stroke={`${GOLD}0.9)`} strokeWidth="1.5" strokeLinecap="round"/>
                     <circle cx="130" cy="44" r="4" fill={`${GOLD}1)`}/>
                     {[5,10,15,20,25].map(a=>(
-                        <line key={a} x1="130" y1="130" x2={130+86*Math.sin(a*Math.PI/180)} y2={130-86*Math.cos(a*Math.PI/180)}
+                        <line key={a} x1="130" y1="130" 
+                            x2={Number((130+86*Math.sin(a*Math.PI/180)).toFixed(2))} 
+                            y2={Number((130-86*Math.cos(a*Math.PI/180)).toFixed(2))}
                             stroke={`${GOLD}${(0.14-a*0.024).toFixed(2)})`} strokeWidth="1"/>
                     ))}
                 </g>
@@ -52,7 +54,8 @@ const steps = [
                     {label:'TDS History',   angle:228, done:false},
                 ].map(({label,angle,done})=>{
                     const rad=(angle-90)*Math.PI/180;
-                    const x=130+100*Math.cos(rad), y=130+100*Math.sin(rad);
+                    const x=Number((130+100*Math.cos(rad)).toFixed(2));
+                    const y=Number((130+100*Math.sin(rad)).toFixed(2));
                     return (
                         <g key={label}>
                             <circle cx={x} cy={y} r="17" fill={done?`${GOLD}0.12)`:'rgba(255,255,255,0.03)'} stroke={done?`${GOLD}0.4)`:'rgba(255,255,255,0.08)'} strokeWidth="1"/>
@@ -398,7 +401,7 @@ export default function Process() {
                         }}>
                             {/* Heading */}
                             <div>
-                                <h2 style={{
+                                <h2 className="font-mont" style={{
                                     fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
                                     fontWeight: 600, color: '#FFFFFF',
                                     lineHeight: 1.2, letterSpacing: '-0.02em', margin: 0,
@@ -450,7 +453,7 @@ export default function Process() {
 
                                                 {/* Text */}
                                                 <div style={{ flex: 1, paddingBottom: isActive ? '0' : '28px' }}>
-                                                    <h3 style={{
+                                                    <h3 className="font-rethink-semi" style={{
                                                         fontSize: 'clamp(1.4rem, 2.2vw, 2rem)',
                                                         fontWeight: 500,
                                                         color: isActive ? '#FFFFFF' : isPast ? '#FFFFFF' : '#52525B',

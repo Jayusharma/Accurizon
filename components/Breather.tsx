@@ -32,6 +32,7 @@ export default function Breather() {
     return (
         <section
             ref={sectionRef}
+            className="font-rethink-semi"
             style={{
                 background: '#F9FAFB', // Base canvas color
                 padding: '64px 24px 40px',
@@ -82,7 +83,7 @@ export default function Breather() {
                     width: '140px',
                     height: '2px',
                     background: '#0A1628',
-                    margin: '48px auto 0',
+                    margin: '52px auto 0',
                     opacity: 0.15
                 }} />
             </div>

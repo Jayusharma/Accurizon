@@ -45,8 +45,8 @@ const services = [
     },
 ];
 
-const GOLD = '#C8A96E';
-const GOLD_DIM = 'rgba(200,169,110,0.15)';
+const GOLD = '#3b82f6'; // Brand Blue
+const GOLD_DIM = 'rgba(59,130,246,0.15)';
 const GLASS_BG = 'rgba(255,255,255,0.04)';
 const GLASS_BORDER = '1px solid rgba(255,255,255,0.08)';
 
@@ -61,7 +61,7 @@ function SetupWidget({ active }: { active: boolean }) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <span style={{ fontSize: '0.7rem', color: GOLD, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Setup Progress</span>
+                <span style={{ fontSize: '0.7rem', color: '#e5e4e4ff', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Setup Progress</span>
                 <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)' }}>Q1 2025</span>
             </div>
             {steps.map((s, i) => (
@@ -71,11 +71,11 @@ function SetupWidget({ active }: { active: boolean }) {
                         <span style={{ fontSize: '0.72rem', color: s.pct === 100 ? GOLD : 'rgba(255,255,255,0.4)', fontWeight: 600 }}>{s.pct}%</span>
                     </div>
                     <div style={{ height: '3px', background: 'rgba(255,255,255,0.06)', borderRadius: '99px', overflow: 'hidden' }}>
-                        <div style={{ height: '100%', width: active ? `${s.pct}%` : '0%', background: s.pct === 100 ? GOLD : 'rgba(200,169,110,0.5)', borderRadius: '99px', transition: `width 0.8s cubic-bezier(0.16,1,0.3,1) ${0.3 + i * 0.12}s` }} />
+                        <div style={{ height: '100%', width: active ? `${s.pct}%` : '0%', background: s.pct === 100 ? GOLD : 'rgba(59,130,246,0.5)', borderRadius: '99px', transition: `width 0.8s cubic-bezier(0.16,1,0.3,1) ${0.3 + i * 0.12}s` }} />
                     </div>
                 </div>
             ))}
-            <div style={{ marginTop: '14px', padding: '10px 14px', background: GOLD_DIM, borderRadius: '10px', border: `1px solid rgba(200,169,110,0.2)`, display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ marginTop: '14px', padding: '10px 14px', background: GOLD_DIM, borderRadius: '10px', border: `1px solid rgba(59,130,246,0.2)`, display: 'flex', justifyContent: 'space-between' }}>
                 <div><div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', marginBottom: '3px' }}>Avg. Setup Time</div><div style={{ fontSize: '1rem', fontWeight: 600, color: '#fff' }}>4.2 days</div></div>
                 <div style={{ textAlign: 'right' }}><div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', marginBottom: '3px' }}>Accuracy</div><div style={{ fontSize: '1rem', fontWeight: 600, color: GOLD }}>99.8%</div></div>
             </div>
@@ -96,7 +96,7 @@ function CashflowWidget({ active }: { active: boolean }) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                <span style={{ fontSize: '0.7rem', color: GOLD, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Cash Flow</span>
+                <span style={{ fontSize: '0.7rem', color: " #e5e4e4ff", fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Cash Flow</span>
                 <span style={{ fontSize: '0.65rem', padding: '3px 10px', borderRadius: '99px', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.4)' }}>7 months</span>
             </div>
             <div style={{ marginBottom: '16px' }}>
@@ -107,7 +107,7 @@ function CashflowWidget({ active }: { active: boolean }) {
                 {bars.map((h, i) => (
                     <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
                         <div style={{ width: '100%', position: 'relative', height: '80px', display: 'flex', alignItems: 'flex-end' }}>
-                            <div style={{ width: '100%', height: active ? `${h}%` : '0%', background: i === 6 ? GOLD : 'rgba(200,169,110,0.25)', borderRadius: '4px 4px 0 0', transition: `height 0.7s cubic-bezier(0.16,1,0.3,1) ${i * 0.07}s` }} />
+                            <div style={{ width: '100%', height: active ? `${h}%` : '0%', background: i === 6 ? GOLD : 'rgba(59,130,246,0.25)', borderRadius: '4px 4px 0 0', transition: `height 0.7s cubic-bezier(0.16,1,0.3,1) ${i * 0.07}s` }} />
                         </div>
                         <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.3)' }}>{months[i]}</span>
                     </div>
@@ -127,7 +127,7 @@ function ComplianceWidget({ active }: { active: boolean }) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                <span style={{ fontSize: '0.7rem', color: GOLD, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Compliance Tracker</span>
+                <span style={{ fontSize: '0.7rem', color: " #e5e4e4ff", fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Compliance Tracker</span>
                 <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.3)' }}>FY 2024–25</span>
             </div>
             {items.map((it, i) => (
@@ -166,12 +166,12 @@ function MISWidget({ active }: { active: boolean }) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%', gap: '10px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                <span style={{ fontSize: '0.7rem', color: GOLD, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>MIS Dashboard</span>
+                <span style={{ fontSize: '0.7rem', color: " #e5e4e4ff", fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>MIS Dashboard</span>
                 <span style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.3)' }}>Apr 2025</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '3px', height: '48px', marginBottom: '4px' }}>
                 {sparkline.map((h, i) => (
-                    <div key={i} style={{ flex: 1, height: active ? `${h}%` : '0%', background: i === sparkline.length - 1 ? GOLD : `rgba(200,169,110,${0.15 + i * 0.04})`, borderRadius: '3px 3px 0 0', transition: `height 0.6s cubic-bezier(0.16,1,0.3,1) ${i * 0.06}s` }} />
+                    <div key={i} style={{ flex: 1, height: active ? `${h}%` : '0%', background: i === sparkline.length - 1 ? GOLD : `rgba(59,130,246,${0.15 + i * 0.04})`, borderRadius: '3px 3px 0 0', transition: `height 0.6s cubic-bezier(0.16,1,0.3,1) ${i * 0.06}s` }} />
                 ))}
             </div>
             <div style={{ height: '1px', background: 'rgba(255,255,255,0.06)', marginBottom: '4px' }} />
@@ -229,10 +229,10 @@ function ServiceCard({ service: s, index }: { service: typeof services[0]; index
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative', zIndex: 1 }}>
                 <div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
-                        <span style={{ fontSize: '0.7rem', color: GOLD, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Phase {s.number}</span>
+                        <span style={{ fontSize: '0.7rem', color: '#fff', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Phase {s.number}</span>
                         <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: GOLD, animation: 'pulse-dot 2.5s ease-in-out infinite', animationDelay: `${index * 0.3}s` }} />
                     </div>
-                    <h3 style={{ color: '#FFFFFF', fontSize: 'clamp(1.6rem, 2.4vw, 2.4rem)', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '16px' }}>{s.title}</h3>
+                    <h3 className="font-rethink-semi" style={{ color: '#FFFFFF', fontSize: 'clamp(1.6rem, 2.4vw, 2.4rem)', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '16px' }}>{s.title}</h3>
                     <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.42)', lineHeight: 1.7, marginBottom: '0' }}>{s.tagline}</p>
                 </div>
 
@@ -257,12 +257,12 @@ function ServiceCard({ service: s, index }: { service: typeof services[0]; index
                 border: '1px solid rgba(255,255,255,0.07)',
                 padding: '22px',
                 display: 'flex', flexDirection: 'column',
-                boxShadow: `inset 0 1px 0 rgba(255,255,255,0.06), 0 0 40px rgba(200,169,110,0.04)`,
+                boxShadow: `inset 0 1px 0 rgba(255,255,255,0.06), 0 0 40px rgba(59,130,246,0.04)`,
                 overflow: 'hidden',
                 transform: 'translateZ(0)',
             }}>
                 {/* inner subtle gold glow */}
-                <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '160px', height: '160px', background: `radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%)`, pointerEvents: 'none' }} />
+                <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '160px', height: '160px', background: `radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)`, pointerEvents: 'none' }} />
                 {widget}
             </div>
 
@@ -360,7 +360,7 @@ export default function Services() {
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '40px 60px 0', zIndex: 10, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                     <div>
                         <div className="text-label" style={{ color: '#0A1628', marginBottom: '8px' }}>Our Playbook</div>
-                        <h2 style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', fontWeight: 500, color: '#0A1628', letterSpacing: '-0.04em', lineHeight: 1.1, margin: 0 }}>The Engine of Scale</h2>
+                        <h2 className="font-mont" style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', fontWeight: 500, color: '#0A1628', letterSpacing: '-0.04em', lineHeight: 1.1, margin: 0 }}>The Engine of Scale</h2>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#64748B', fontSize: '0.9rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', paddingBottom: '4px' }}>
                         <span>Scroll to explore</span>
